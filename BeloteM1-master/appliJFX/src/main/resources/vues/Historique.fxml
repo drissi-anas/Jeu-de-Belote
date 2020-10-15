@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0"
+      style="-fx-background-image: url('laTable/belote-background.jpg');" xmlns="http://javafx.com/javafx/10.0.1"
+      fx:controller="vues.Historique">
+
+    <VBox fx:id="maVbox" alignment="TOP_RIGHT" layoutX="54.0" layoutY="100.0" prefHeight="484.0" prefWidth="425.0"/>
+
+    <Hyperlink layoutX="412.0" layoutY="65.0" onAction="#actionRetour" prefHeight="23.0" prefWidth="50.0"
+               text="Retour menu" textAlignment="CENTER"/>
+
+</Pane>

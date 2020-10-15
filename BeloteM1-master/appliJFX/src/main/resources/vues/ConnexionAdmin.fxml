@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.112"
+      fx:controller="vues.Inscription">
+    <VBox alignment="CENTER" layoutX="262.0" layoutY="222.0" prefHeight="123.0" prefWidth="271.0">
+        <children>
+            <Label text="Identifiant"/>
+            <TextField fx:id="pseudoAdmin"/>
+            <Label text="Mot de passe"/>
+            <TextField fx:id="motDePasse"/>
+            <Button mnemonicParsing="false" onAction="#connecterAdmin" text="Connexion"/>
+        </children>
+    </VBox>
+
+    <Text layoutX="249.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrateur"
+          textAlignment="CENTER" wrappingWidth="304.6667810279723" y="-100.0">
+        <font>
+            <Font name="Georgia Bold" size="24.0"/>
+        </font>
+        <effect>
+            <DropShadow/>
+        </effect>
+    </Text>
+</Pane>

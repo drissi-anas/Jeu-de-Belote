@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0"
+          style="-fx-background-image: url('laTable/belote-background.jpg');" xmlns="http://javafx.com/javafx/10.0.1"
+          fx:controller="vues.PageAdmin">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.33331298828125" minWidth="10.0"
+                           prefWidth="78.66663869222003"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="614.0000279744468" minWidth="10.0"
+                           prefWidth="576.0000406901041"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.33335367838538" minWidth="10.0"
+                           prefWidth="92.66666666666663"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.6666259765625" minWidth="10.0" prefWidth="64.66666666666663"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <VBox alignment="CENTER" prefWidth="200.0">
+                    <children>
+                        <Label text="Liste des joueurs"/>
+                        <ComboBox fx:id="ListJoueurs" prefWidth="150.0" promptText="Voir les Joueurs"/>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefWidth="200.0">
+                    <children>
+                        <Label text="Liste des concours"/>
+                        <ComboBox fx:id="ListConcours" prefWidth="150.0" promptText="Les concours"/>
+                        <Button mnemonicParsing="false" onAction="#retirerConcours" prefWidth="150.0"
+                                text="Retirer Concours"/>
+                        <Button mnemonicParsing="false" onAction="#afficherClassement" prefWidth="150.0"
+                                text="Afficher le classement"/>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefWidth="200.0">
+                    <children>
+                        <Label text="Nom du nouveau concours"/>
+
+                        <TextField fx:id="nomConcours"/>
+
+                        <Button mnemonicParsing="false" onAction="#ajouterConcours" text="Creer concours"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Button mnemonicParsing="false" onAction="#goToPageAdmin" text="Actualiser" GridPane.columnIndex="1"
+                GridPane.rowIndex="2"/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Voici les Concours et les actions" textAlignment="CENTER"
+              wrappingWidth="600.6667962867614" y="-100.0" GridPane.columnIndex="1">
+            <font>
+                <Font name="Georgia Bold" size="24.0"/>
+            </font>
+            <effect>
+                <DropShadow/>
+            </effect>
+        </Text>
+        <Button mnemonicParsing="false" onAction="#goToInscription" text="Deconnecter" GridPane.columnIndex="2"
+                GridPane.rowIndex="2"/>
+        <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <children>
+                <HBox>
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="35.0" text="Heure"/>
+                        <Label prefHeight="17.0" prefWidth="40.0" text="min"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="20.0" prefWidth="90.0">
+                    <children>
+                        <TextField fx:id="heure" prefHeight="25.0" prefWidth="34.0"/>
+                        <TextField fx:id="minute" prefHeight="25.0" prefWidth="34.0"/>
+                    </children>
+                    <padding>
+                        <Insets bottom="8.0"/>
+                    </padding>
+                </HBox>
+            </children>
+            <GridPane.margin>
+                <Insets bottom="18.0"/>
+            </GridPane.margin>
+        </VBox>
+    </children>
+</GridPane>

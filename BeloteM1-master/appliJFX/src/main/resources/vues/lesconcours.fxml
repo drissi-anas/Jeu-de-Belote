@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0"
+          style="-fx-background-image: url('laTable/belote-background.jpg');" xmlns="http://javafx.com/javafx/10.0.1"
+          fx:controller="vues.LesConcours">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="456.33331298828125"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.66668701171875" minWidth="10.0"
+                           prefWidth="76.66668701171875"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="288.66668701171875" minHeight="10.0" prefHeight="204.00002543131512"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="398.99999491373694" minHeight="10.0" prefHeight="310.6666412353516"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="485.9999771118164" minHeight="10.0" prefHeight="91.66667175292963"
+                        vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <VBox alignment="CENTER" prefHeight="320.0" prefWidth="461.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+
+                <Label text="Liste des concours"/>
+                <ComboBox fx:id="ListConcours" prefWidth="150.0" promptText="Les concours"/>
+                <HBox>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#afficherClassement" prefWidth="150.0"
+                                text="Afficher le classement"/>
+                        <Button mnemonicParsing="false" onAction="#participerConcours" prefWidth="150.0"
+                                text="Participer au concours"/>
+                        <Button mnemonicParsing="false" onAction="#afficherLeConcours" prefWidth="150.0"
+                                text="Afficher le concours"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Voici les Concours, choisissez une action"
+              textAlignment="CENTER" wrappingWidth="461.33336122816763" y="-100.0" GridPane.columnIndex="1">
+            <font>
+                <Font name="Georgia Bold" size="24.0"/>
+            </font>
+            <effect>
+                <DropShadow/>
+            </effect>
+        </Text>
+        <Hyperlink onAction="#goToAccueil" text="Accueil" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    </children>
+</GridPane>
